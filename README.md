@@ -3,12 +3,6 @@ A library for making it easy to have multiple buttons connected to the same anal
 Using resistors one connects multiple buttons in parrallell with different resistors for each of the 
 buttons. When a button is pressed the arduino reads a different value for each of the buttons.
 
-## Installation
-1. Download as zip
-2. Unzip
-3. Copy the folder "ButtonRow" into arduino-x.x.x/libraries/ (x..x.x stands for version number)
-4. restart the Arduino IDE
-
 ## Example usage
 ```cpp
 #include <Arduino.h>
@@ -53,6 +47,13 @@ void loop() {
     delay(100);
 }
 ```
+
+## Installation
+1. Download as zip
+2. Unzip
+3. Copy the folder "ButtonRow" into arduino-x.x.x/libraries/ (x..x.x stands for version number)
+4. restart the Arduino IDE
+
 
 ## Documentation
 
@@ -104,5 +105,18 @@ ButtonRow buttonRow(analogIn, button_values, size, threshold, repeat_click_timeo
 int pushed_button = buttonRow.getPushedButton();
 ```
 
+## Authors
+
+* **Dag Frode Solberg** - *Initial work* - [DagF](https://github.com/DagF)
+
+See also the list of [contributors](https://github.com/trolllabs/arduino-button-row/contributors) who participated in this project.
 
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Trolllabs
+* Smart Storage group
