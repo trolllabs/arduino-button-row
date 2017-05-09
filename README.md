@@ -63,13 +63,13 @@ Constructor
 
 #### Arguments
 
-|type | name | description|
-| --- | --- | --- | 
-|int|analogPin|Analog pin to read from. The pin the button row is connected to.|
-|int[]|analogbutton_values|Array of int values of the analog value read for each of the buttons. A value between 0-1023. Used to identify what button was pressed. You can add combinations of values as buttons if you like as well see example usage. Supports up to 16 values.|
-|int|size|Number of buttons in the button row. C++ can not find the size of the array of buttons when it is sent to a class or function.|
-|int|threshold|The analog value is not perfect and can change some when read. The threshold value let you specify how large range you want to assign. Say the value is button value is 10 and the threshold is 5 then values from 5-15 will be assigned that button.|
-|int|repeat_click_timeout|When clicking a button it is easy that multiple clicks are registered instead of just one. A timeout has therefore been added to prevent this. This does not just delay but millis so it is non-blocking. A Value of 500, that is 500ms has been found to be a good value.|
+|type | name | description| default |
+| --- | --- | --- | --- |
+|int|analogPin|Analog pin to read from. The pin the button row is connected to.| |
+|int[]|analogbutton_values|Array of int values of the analog value read for each of the buttons. A value between 0-1023. Used to identify what button was pressed. You can add combinations of values as buttons if you like as well see example usage. Supports up to 16 values.| |
+|int|size|Number of buttons in the button row. C++ can not find the size of the array of buttons when it is sent to a class or function.| |
+|int|threshold|The analog value is not perfect and can change some when read. The threshold value let you specify how large range you want to assign. Say the value is button value is 10 and the threshold is 5 then values from 5-15 will be assigned that button.| 2|
+|int|repeat_click_timeout|When clicking a button it is easy that multiple clicks are registered instead of just one. A timeout has therefore been added to prevent this. This does not just delay but millis so it is non-blocking. A Value of 500, that is 500ms has been found to be a good value.|500|
 
 To support more than 16 buttons edit `int _analog_button_values[16];` in `ButtonRow.h` to the desired number.
 
