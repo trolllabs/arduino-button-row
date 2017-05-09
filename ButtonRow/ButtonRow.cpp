@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <ButtonRow.h>
 
-ButtonRow::ButtonRow(int analog_pin, int analog_button_values[], int analog_button_values_length, int threshold, int repeat_click_timeout) {
+ButtonRow::ButtonRow(int analog_pin, int analog_button_values[], int analog_button_values_length, int threshold, int repeat_click_timeout = 500) {
     _analog_button_values_length = analog_button_values_length;
     for (int i = 0; i < _analog_button_valuesLength; i++) {
         _analog_button_values[i] = analog_button_values[i];
