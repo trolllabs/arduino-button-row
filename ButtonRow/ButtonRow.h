@@ -4,7 +4,7 @@
 
 class ButtonRow {
 public:
-    ButtonRow(int analog_pin, int analog_button_values[], int analog_button_values_length, int threshold, int repeat_click_timeout);
+    ButtonRow(int analog_pin, int analog_button_values[], int analog_button_values_length, int threshold = 2, int repeat_click_timeout = 500);
 
     int getPushedButton();
 
